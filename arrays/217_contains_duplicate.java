@@ -1,4 +1,4 @@
-// Approach 2: Hash Set
+// Approach 1: Brute Force
 // Time complexity: O(n²)
 // Space complexity: O(1)
 
