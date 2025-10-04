@@ -1,6 +1,6 @@
 // Approach 1: Reverse String
-// Time complexity: O(n)
-// Space complexity: O(n)
+// Time complexity: O(n) 
+// Space complexity: O(n) for optimized string.
 
 public class Solution {
     public boolean isPalindrome(String s) {
