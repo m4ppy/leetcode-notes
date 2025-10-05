@@ -45,7 +45,7 @@ class Solution:
 
 # Approach 3: Two Pointers
 # Time complexity: O(n²)
-# Space complexity: O(n) for hash map.
+# Space complexity: O(n) or O(1) depending on sort algorithm.
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
