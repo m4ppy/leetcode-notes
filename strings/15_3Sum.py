@@ -1,5 +1,5 @@
 # Approach 1: Brute Force
-# Time complexity: O(n3)
+# Time complexity: O(n³)
 # Space complexity: O(m) m is the number of triplets.
 
 class Solution:
@@ -15,8 +15,8 @@ class Solution:
         return [list(i) for i in res]
 
 # Approach 2: Hash Map
-# Time complexity: O(n3)
-# Space complexity: O(m) m is the number of triplets.
+# Time complexity: O(n²)
+# Space complexity: O(n) for hash map.
 
 class Solution:
     def threeSum(self, nums: List[int]) -> List[List[int]]:
