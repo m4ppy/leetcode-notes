@@ -1,6 +1,30 @@
+// Approach 1: Brute Force
+// Time complexity: O(n³) sort the array and use two pointers for each element. 
+// Space complexity: O(m) number of tripets.
+
+class Solution {
+    public List<List<Integer>> threeSum(int[] nums) {
+        Set<List<Integer>> res = new HashSet<>();
+        Arrays.sort(nums);
+
+        for (int i = 0; i < nums.length - 2; i++) {
+            for (int j = i + 1; j < nums.length - 1; j++) {
+                for (int k = j + 1; k < nums.length; k++) {
+                    if (nums[i] + nums[j] + nums[k] == 0) {
+                        res.add(Arrays.asList(nums[i], nums[j], nums[k]));
+                    }
+                }
+            }
+        }
+        return new ArrayList<>(res);
+    }
+}
+
 // Approach 2: Two Pointers
 // Time complexity: O(n²) sort the array and use two pointers for each element. 
-// Space complexity: O(1) or O(n) depending on sort algorithm.
+// Space complexity: 
+//     O(1) or O(n) depending on sort algorithm.
+//     O(m) number of tripets.
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
