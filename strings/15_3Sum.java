@@ -24,7 +24,7 @@ class Solution {
 // Time complexity: O(n²) sort the array and use two pointers for each element. 
 // Space complexity: 
 //     O(1) or O(n) depending on sort algorithm.
-//     O(m) number of tripets.
+//     O(m) for output list.
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
