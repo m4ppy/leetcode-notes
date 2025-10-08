@@ -1,6 +1,6 @@
 // Approach 1: Brute Force
 // Time complexity: O(n³) sort the array and use two pointers for each element. 
-// Space complexity: O(m) number of tripets.
+// Space complexity: O(m) m is number of tripets.
 
 class Solution {
     public List<List<Integer>> threeSum(int[] nums) {
