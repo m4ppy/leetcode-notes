@@ -23,7 +23,7 @@ class Solution {
 // Approach 2: Two Pointers
 // Time complexity: O(n²) sort the array and use two pointers for each element. 
 // Space complexity: 
-//     O(1) or O(n) depending on sort algorithm.
+//     O(1) or O(n) is depending on sort algorithm.
 //     O(m) for output list.
 
 class Solution {
