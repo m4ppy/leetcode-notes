@@ -1,5 +1,5 @@
 # Approach 1: Sorting
-# Time complexity: O(n) initialize dictionary for count and list for sort
+# Time complexity: O(n log n) initialize dictionary for count and list for sort + sort the list
 # Space complexity: O(n) count and list for sort.
 
 class Solution:
