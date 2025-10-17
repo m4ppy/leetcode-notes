@@ -1,8 +1,8 @@
 # algorithm must runs in O(n) time -> only Hash Set solution is right.
 
 # Approach 1: Brute Force
-# Time complexity: O(n²) because we use two nested loops to traverse the list.
-# Space complexity: O(n) as no extra space is used.
+# Time complexity: O(n²)
+# Space complexity: O(n) for hashSet.
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
@@ -43,7 +43,7 @@ class Solution:
 
 # Approach 3: Hash Set
 # Time complexity: O(n) 
-# Space complexity: O(n) 
+# Space complexity: O(n) for hashSet.
 
 class Solution:
     def longestConsecutive(self, nums: List[int]) -> int:
