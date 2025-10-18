@@ -1,6 +1,6 @@
 # Approach 1: Breath First Search
 # Time complexity: O(n)
-# Space complexity: O(h) worst case: O(n) best case: O(log n)
+# Space complexity: O(n)
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
@@ -23,7 +23,7 @@ class Solution:
 
 # Approach 2: Depth First Search
 # Time complexity: O(n)
-# Space complexity: O(n) for call stack.
+# Space complexity: O(h) worst case: O(n) best case: O(log n)
 
 class Solution:
     def maxDepth(self, root: Optional[TreeNode]) -> int:
