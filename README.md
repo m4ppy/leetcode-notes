@@ -1,7 +1,7 @@
 # leetcode-notes
 practice DSA problems from leetcode
 
-strings|
-arrays|
-sorting|
-trees|
+strings| \n
+arrays|  \n
+sorting| \n
+trees| \n
