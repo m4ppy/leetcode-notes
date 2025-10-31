@@ -1,7 +1,10 @@
 # leetcode-notes
 practice DSA problems from leetcode
 
-strings|
-arrays| 
-sorting
-trees|
+MON | string
+TUE | array/stack/queue/heap
+WED | linked list
+THU | sorting
+FRI | tree
+SAT | graph
+SUN | DP
