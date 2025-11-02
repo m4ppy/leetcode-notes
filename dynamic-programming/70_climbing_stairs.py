@@ -1,6 +1,7 @@
 # Approach 1: Recursion
 # Time complexity: O(2ⁿ)
 # Space complexity: O(n) 
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         if n <= 2:
@@ -11,6 +12,7 @@ class Solution:
 # Approach 2-1: Dynamic Programming - Top-Down (backward)
 # Time complexity: O(n)
 # Space complexity: O(n)
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         def dfs(i):
@@ -29,6 +31,7 @@ class Solution:
 # Approach 2-2: Dynamic Programming - Top-Down (forward)
 # Time complexity: O(n)
 # Space complexity: O(n)
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         def dfs(i):
@@ -47,6 +50,7 @@ class Solution:
 # Approach 3-1: Dynamic Programming - Bottom-Up
 # Time complexity: O(n)
 # Space complexity: O(n)
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         dp = [-1] * n
@@ -59,6 +63,7 @@ class Solution:
 # Approach 3-2: Dynamic Programming - Bottom-Up (space optimized)
 # Time complexity: O(n)
 # Space complexity: O(1)
+
 class Solution:
     def climbStairs(self, n: int) -> int:
         prev1, prev2 = 1, 1
