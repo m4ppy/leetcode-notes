@@ -35,8 +35,6 @@ class Solution:
         cache = [-1] * n
         return dfs(0)
 
-Bottom up
-
 class Solution:
     def climbStairs(self, n: int) -> int:
         dp = [-1] * n
@@ -48,12 +46,11 @@ class Solution:
 
 class Solution:
     def climbStairs(self, n: int) -> int:
-        prev1, prev2 = 1, 2
+        prev1, prev2 = 1, 1
         
-        for i in range(3, n + 1):
+        for i in range(n - 1):
             temp = prev1
-            prev1 = prev2
-            prev2 = temp + prev2
+            prev1 = prev1 + prev2
+            prev2 = temp
         
-        return prev2
-
+        return prev1
