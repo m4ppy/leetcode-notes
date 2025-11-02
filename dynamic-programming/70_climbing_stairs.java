@@ -1,6 +1,7 @@
 // Approach 1: Recursion
 // Time complexity: O(2ⁿ)
 // Space complexity: O(n) 
+
 class Solution {
     public int climbStairs(int n) {
         if (n <= 2) {
@@ -14,6 +15,7 @@ class Solution {
 // Approach 2-1: Dynamic Programming - Top-Down (backward)
 // Time complexity: O(n)
 // Space complexity: O(n)
+
 class Solution {
     int[] cache;
 
@@ -35,6 +37,7 @@ class Solution {
 // Approach 2-2: Dynamic Programming - Top-Down (forward)
 // Time complexity: O(n)
 // Space complexity: O(n)
+
 class Solution {
     int[] cache;
 
@@ -56,6 +59,7 @@ class Solution {
 // Approach 3-1: Dynamic Programming - Bottom-Up
 // Time complexity: O(n)
 // Space complexity: O(n)
+
 class Solution {
     public int climbStairs(int n) {
         if (n <= 2) return n;
@@ -73,6 +77,7 @@ class Solution {
 // Approach 3-2: Dynamic Programming - Bottom-Up (space optimized)
 // Time complexity: O(n)
 // Space complexity: O(1)
+
 class Solution {
     public int climbStairs(int n) {
         int prev1 = 1, prev2 = 1;
