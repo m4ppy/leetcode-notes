@@ -5,3 +5,55 @@ class Solution:
         return self.climbStairs(n - 1) + self.climbStairs(n - 2)
 
   
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        def dfs(i):
+            if i <= 2:
+                return i
+
+            if cache[i] != -1:
+                return cache[i]
+            
+            cache[i] = dfs(i - 1) + dfs(i - 2)
+            return cache[i]
+
+        cache = [-1] * (n + 1)
+        return dfs(n)
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        def dfs(i):
+            if i >= n:
+                return i == n
+
+            if cache[i] != -1:
+                return cache[i]
+            
+            cache[i] = dfs(i + 1) + dfs(i + 2)
+            return cache[i]
+
+        cache = [-1] * n
+        return dfs(0)
+
+Bottom up
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        dp = [-1] * n
+        dp[0], dp[1] = 1, 2
+        for i in range(2, n):
+            dp[i] = dp[i - 1] + dp[i -2]
+        
+        return dp[n - 1]
+
+class Solution:
+    def climbStairs(self, n: int) -> int:
+        prev1, prev2 = 1, 2
+        
+        for i in range(3, n + 1):
+            temp = prev1
+            prev1 = prev2
+            prev2 = temp + prev2
+        
+        return prev2
+
