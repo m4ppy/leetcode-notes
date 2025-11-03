@@ -1,0 +1,37 @@
+// Approach 1: Brute Force
+// Time complexity: O(n²)  
+// Space complexity: O(1) 
+
+class Solution {
+    public int maxArea(int[] heights) {
+        int res = 0;
+        for (int i = 0; i < heights.length; i++) {
+            for (int j = i + 1; j < heights.length; j++) {
+                res = Math.max(res, Math.min(heights[i], heights[j]) * (j - i));
+            }
+        }
+        return res;
+    }
+}
+
+// Approach 2: Two Pointers
+// Time complexity: O(n)  
+// Space complexity: O(1) 
+
+class Solution {
+    public int maxArea(int[] heights) {
+        int l = 0, r = heights.length - 1;
+        int res = 0;
+        while (l < r) {
+            int area = Math.min(heights[l], heights[r]) * (r - l);
+            res = Math.max(res, area);
+
+            if (heights[l] < heights[r]) {
+                l++;
+            } else {
+                r--;
+            }
+        }
+        return res;
+    }
+}
