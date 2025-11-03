@@ -1,3 +1,7 @@
+# Approach 1: Brute Force
+# Time complexity: O(n²)  
+# Space complexity: O(1) 
+
 class Solution:
     def maxArea(self, heights: List[int]) -> int:
         res = 0
@@ -6,6 +10,9 @@ class Solution:
                 res = max(res, min(heights[i], heights[j]) * (j - i))
         return res
 
+# Approach 2: Two Pointers
+# Time complexity: O(n)  
+# Space complexity: O(1) 
 
 class Solution:
     def maxArea(self, heights: List[int]) -> int:
@@ -24,7 +31,6 @@ class Solution:
             res = max(area, res)
 
         return res
-
 
 class Solution:
     def maxArea(self, heights: List[int]) -> int:
