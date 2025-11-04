@@ -5,6 +5,6 @@ practice DSA problems from leetcode
 'TUE' | 'array/stack/queue/heap'
 'WED' | ''linked list''
 'THU' | 'sorting'
-'FRI' | 'tree'
-'SAT' | 'graph'
-'SUN' | 'DP'
+FRI | tree
+SAT | graph
+SUN | DP
