@@ -1,4 +1,6 @@
-Brute Force
+# Approach 1: Brute Force
+# Time complexity: O(n²) 
+# Space complexity: O(1)
 
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
@@ -12,7 +14,9 @@ class Solution:
 
         return res
 
-Prefix + Hash Map
+# Approach 2: Prefix + Hash Map
+# Time complexity: O(n) 
+# Space complexity: O(n) for hash map
 
 class Solution:
     def subarraySum(self, nums: List[int], k: int) -> int:
