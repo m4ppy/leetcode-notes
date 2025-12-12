@@ -1,9 +1,9 @@
 /* 
-LeetCode 70. Climbing Stairs
-Link: https://leetcode.com/problems/climbing-stairs/
-Difficulty: Easy
+LeetCode 300. Longest Increasing Subsequence
+Link: https://leetcode.com/problems/longest-increasing-subsequence/
+Difficulty: Medium
 Primary: Dynamic Programming
-Tags: [dp, memoization, tabulation, fibonacci]
+Tags: [dp, binary-search, patience-sorting, array]
 Solved: 2025-11-15
 */
 

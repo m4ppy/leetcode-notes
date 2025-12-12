@@ -1,43 +1,43 @@
 # 1. Two Sum
 
-**Link:** [LeetCode 1 – Two Sum](https://leetcode.com/problems/two-sum/)  
+**Link:** [LeetCode 242 – Valid Anagram](https://leetcode.com/problems/valid-anagram/)  
 **Difficulty:** Easy  
 **Primary Topic:** Hashmaps  
-**Tags:** [array, hashmap, prefix-sum]  
+**Tags:** [string, hashmap, count]  
 **Languages:** Python, Java  
-**Solved:** 2025-10-01  
+**Solved:** 2025-11-11 
 
 ---
 
 ### 🧩 Problem Summary
-Given an array of integers `nums` and an integer `target`, return indices of the two numbers that add up to `target`.
+Given two strings `s` and `t`, return true if `t` is an anagram of `s`, and false otherwise.
 
 ---
 
 ### 🧠 Approaches
 
-#### Approach 1: Brute Force
+#### Approach 1: Sorting
 - Check every possible pair of numbers to find two that add up to the target.
 - **Time Complexity:** O(n²)  
 - **Space Complexity:** O(1)
 
-#### Approach 2: Hash Map (Optimal)
+#### Approach 2: Hash Map
 - Use a hash map to store numbers and their indices.
 - For each number, check if its complement (target - num) already exists.
 - **Time Complexity:** O(n)  
-- **Space Complexity:** O(n)
+- **Space Complexity:** O(1)
 
 ---
 
 ### 🚀 Approaches Implemented
 | Language | File |
 |-----------|------|
-| Python | [`1_two_sum.py`](./1_two_sum.py) |
-| Java | [`1_two_sum.java`](./1_two_sum.java) |
+| Python | [`242_valid_anagram.py`](./242_valid_anagram.py) |
+| Java | [`242_valid_anagram.java`](./242_valid_anagram.java) |
 
 ---
 
 ### ✅ Example
 ```python
-Input: nums = [2,7,11,15], target = 9  
-Output: [0,1]
+Input: s = "anagram", t = "nagaram"
+Output: True

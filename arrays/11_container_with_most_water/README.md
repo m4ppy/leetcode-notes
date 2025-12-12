@@ -1,11 +1,11 @@
 # 1. Two Sum
 
-**Link:** [LeetCode 1 – Two Sum](https://leetcode.com/problems/two-sum/)  
+**Link:** [LeetCode 11 – Container With Most Water](https://leetcode.com/problems/two-sum/)  
 **Difficulty:** Easy  
 **Primary Topic:** Hashmaps  
 **Tags:** [array, hashmap, prefix-sum]  
 **Languages:** Python, Java  
-**Solved:** 2025-10-01  
+**Solved:** 2025-11-03  
 
 ---
 
@@ -18,22 +18,22 @@ Given an array of integers `nums` and an integer `target`, return indices of the
 
 #### Approach 1: Brute Force
 - Check every possible pair of numbers to find two that add up to the target.
-- **Time Complexity:** O(n²)  
+- **Time Complexity:** O(n²) 
 - **Space Complexity:** O(1)
 
-#### Approach 2: Hash Map (Optimal)
+#### Approach 2: Two Pointers
 - Use a hash map to store numbers and their indices.
 - For each number, check if its complement (target - num) already exists.
 - **Time Complexity:** O(n)  
-- **Space Complexity:** O(n)
+- **Space Complexity:** O(1)
 
 ---
 
 ### 🚀 Approaches Implemented
-| Language | File |
-|-----------|------|
-| Python | [`1_two_sum.py`](./1_two_sum.py) |
-| Java | [`1_two_sum.java`](./1_two_sum.java) |
+| Approach | Time | Space | File |
+|-----------|------|--------|------|
+| Brute Force | O(n²) | O(1) | [`11_container_with_most_water.py`](./11_container_with_most_water.py) |
+| Two Pointers | O(n) | O(1) | [`11_container_with_most_water.java`](./11_container_with_most_water.java) |
 
 ---
 
