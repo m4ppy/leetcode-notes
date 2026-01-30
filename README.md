@@ -1,6 +1,5 @@
 # 🧠 LeetCode Notes — Leon Choi
 
-Welcome!  
 This repository contains my personal collection of **LeetCode solutions** written in **Python** and **Java**, organized by **main algorithmic topic**.  
 Each problem folder includes:
 - multiple approaches (brute force → optimized)
