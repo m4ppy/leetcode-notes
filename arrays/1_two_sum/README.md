@@ -4,7 +4,7 @@
 **Difficulty:** Easy  
 **Primary Topic:** Hashmaps  
 **Tags:** [array, hashmap, prefix-sum]  
-**Languages:** Python, Java, C
+**Languages:** Python, Java, C  
 **Solved:** 2025-10-01  
 
 ---
