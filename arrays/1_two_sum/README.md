@@ -4,7 +4,7 @@
 **Difficulty:** Easy  
 **Primary Topic:** Hashmaps  
 **Tags:** [array, hashmap, prefix-sum]  
-**Languages:** Python, Java  
+**Languages:** Python, Java, C
 **Solved:** 2025-10-01  
 
 ---
@@ -34,6 +34,7 @@ Given an array of integers `nums` and an integer `target`, return indices of the
 |-----------|------|
 | Python | [`1_two_sum.py`](./1_two_sum.py) |
 | Java | [`1_two_sum.java`](./1_two_sum.java) |
+| C | [`1_two_sum.c`](./1_two_sum.c) |
 
 ---
 
