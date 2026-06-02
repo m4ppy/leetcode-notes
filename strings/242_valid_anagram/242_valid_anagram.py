@@ -22,7 +22,7 @@ class Solution:
 
     # --- Approach 2: Hash Map ---
     # Time: O(n), Space: O(1)
-    def isAnagram_hash_map(self, s: str, t: str) -> bool:
+    def isAnagram_hashMap(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
 
@@ -37,7 +37,7 @@ class Solution:
 
     # --- Approach 3: Hash Table (Array) ---
     # Time: O(n), Space: O(1)
-    def isAnagram_hash_table(self, s: str, t: str) -> bool:
+    def isAnagram_hashTable(self, s: str, t: str) -> bool:
         if len(s) != len(t):
             return False
 
