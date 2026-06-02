@@ -1,10 +1,10 @@
-# 1. Two Sum
+# 242. Valid Anagram
 
 **Link:** [LeetCode 242 – Valid Anagram](https://leetcode.com/problems/valid-anagram/)  
 **Difficulty:** Easy  
 **Primary Topic:** Hashmaps  
 **Tags:** [string, hashmap, count]  
-**Languages:** Python, Java  
+**Languages:** Python, Java, C
 **Solved:** 2025-11-11 
 
 ---
@@ -17,13 +17,20 @@ Given two strings `s` and `t`, return true if `t` is an anagram of `s`, and fals
 ### 🧠 Approaches
 
 #### Approach 1: Sorting
-- Check every possible pair of numbers to find two that add up to the target.
-- **Time Complexity:** O(n²)  
-- **Space Complexity:** O(1)
+- Sort both strings and compare them.
+- If the sorted strings are identical, they are anagrams.
+- **Time Complexity:** O(n log n)  
+- **Space Complexity:** O(1) or O(n) depending on the sorting implementation
 
 #### Approach 2: Hash Map
-- Use a hash map to store numbers and their indices.
-- For each number, check if its complement (target - num) already exists.
+- Count the frequency of each character using a hash map.
+- If all character counts match, they are anagrams.
+- **Time Complexity:** O(n)  
+- **Space Complexity:** O(n)
+
+#### Approach 3: Hash Table (Array)
+- Count the frequency of each character using a fixed-size array.
+- If all character counts match, they are anagrams.
 - **Time Complexity:** O(n)  
 - **Space Complexity:** O(1)
 
@@ -34,6 +41,7 @@ Given two strings `s` and `t`, return true if `t` is an anagram of `s`, and fals
 |-----------|------|
 | Python | [`242_valid_anagram.py`](./242_valid_anagram.py) |
 | Java | [`242_valid_anagram.java`](./242_valid_anagram.java) |
+| C | [`242_valid_anagram.c`](./242_valid_anagram.c) |
 
 ---
 
