@@ -155,3 +155,17 @@ bool isAnagram_hashTable(char* s, char* t) {
 
     return true;
 }
+
+
+// --- Example Test ---
+int main() {
+    char s[] = "anagram";
+    char t[] = "nagaram";
+
+    bool result = isAnagram_sorting(s, t);
+
+    printf("Input: s = \"%s\", t = \"%s\"\n", s, t);
+    printf("Output: %s\n", result ? "true" : "false");
+
+    return 0;
+}
