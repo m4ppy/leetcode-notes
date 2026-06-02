@@ -13,7 +13,7 @@ class Solution:
     
     # --- Approach 1: Brute Force ---
     # Time: O(n²), Space: O(1)
-    def two_sum_bruteforce(self, nums: List[int], target: int) -> List[int]:
+    def twoSum_bruteForce(self, nums: List[int], target: int) -> List[int]:
         for i in range(len(nums) - 1):
             for j in range(i + 1, len(nums)):
                 if nums[i] + nums[j] == target:
@@ -23,7 +23,7 @@ class Solution:
 
     # --- Approach 2: Hash Map (Optimal) ---
     # Time: O(n), Space: O(n)
-    def two_sum_hashmap(self, nums: List[int], target: int) -> List[int]:
+    def twoSum_hashMap(self, nums: List[int], target: int) -> List[int]:
         seen = {}
         for i, num in enumerate(nums):
             complement = target - num

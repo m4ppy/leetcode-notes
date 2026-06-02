@@ -12,16 +12,10 @@ Solved: 2025-10-01
 
 #define TABLE_SIZE 10007
 
-typedef struct Node Node;
-
-Node* find(Node** table, int key);
-void insert(Node** table, int key, int value);
-void freeTable(Node** table);
-
 
 // --- Approach 1: Brute Force ---
 // Time: O(n²), Space: O(1)
-int* twoSumBruteForce(int* nums, int numsSize, int target, int* returnSize) {
+int* twoSum_bruteForce(int* nums, int numsSize, int target, int* returnSize) {
     for (int i = 0; i < numsSize - 1; i++) {
         for (int j = i + 1; j < numsSize; j++) {
             if (nums[i] + nums[j] == target) {
@@ -43,7 +37,62 @@ int* twoSumBruteForce(int* nums, int numsSize, int target, int* returnSize) {
 
 // --- Approach 2: Hash Map (Optimal) ---
 // Time: O(n), Space: O(n)
-int* twoSumHashMap(int* nums, int numsSize, int target, int* returnSize) {
+typedef struct Node {
+    int key;
+    int value;
+    struct Node* next;
+} Node;
+
+int hash(int key) {
+    long long k = key;
+
+    if (k < 0) {
+        k = -k;
+    }
+
+    return k % TABLE_SIZE;
+}
+
+Node* find(Node** table, int key) {
+    int idx = hash(key);
+    Node* current = table[idx];
+
+    while (current) {
+        if (current->key == key) {
+            return current;
+        }
+
+        current = current->next;
+    }
+
+    return NULL;
+}
+
+void insert(Node** table, int key, int value) {
+    int idx = hash(key);
+
+    Node* node = (Node*)malloc(sizeof(Node));
+
+    node->key = key;
+    node->value = value;
+    node->next = table[idx];
+
+    table[idx] = node;
+}
+
+void freeTable(Node** table) {
+    for (int i = 0; i < TABLE_SIZE; i++) {
+        Node* current = table[i];
+
+        while (current) {
+            Node* temp = current;
+            current = current->next;
+            free(temp);
+        }
+    }
+}
+
+int* twoSum_hashMap(int* nums, int numsSize, int target, int* returnSize) {
     Node* table[TABLE_SIZE] = {0};
 
     for (int i = 0; i < numsSize; i++) {
@@ -90,67 +139,9 @@ int main() {
     if (result) {
         printf("[%d, %d]\n", result[0], result[1]);
         free(result);
+    } else {
+        printf("[]\n");
     }
 
     return 0;
-}
-
-
-// Hash Map Implementation (Hash Table)
-typedef struct Node {
-    int key;
-    int value;
-    struct Node* next;
-} Node;
-
-
-int hash(int key) {
-    if (key < 0) {
-        key = -key;
-    }
-
-    return key % TABLE_SIZE;
-}
-
-
-Node* find(Node** table, int key) {
-    int idx = hash(key);
-
-    Node* current = table[idx];
-
-    while (current) {
-        if (current->key == key) {
-            return current;
-        }
-
-        current = current->next;
-    }
-
-    return NULL;
-}
-
-
-void insert(Node** table, int key, int value) {
-    int idx = hash(key);
-
-    Node* node = (Node*)malloc(sizeof(Node));
-
-    node->key = key;
-    node->value = value;
-    node->next = table[idx];
-
-    table[idx] = node;
-}
-
-
-void freeTable(Node** table) {
-    for (int i = 0; i < TABLE_SIZE; i++) {
-        Node* current = table[i];
-
-        while (current) {
-            Node* temp = current;
-            current = current->next;
-            free(temp);
-        }
-    }
 }

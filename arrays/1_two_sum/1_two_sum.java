@@ -13,7 +13,7 @@ class Solution {
 
     // --- Approach 1: Brute Force ---
     // Time: O(n²), Space: O(1)
-    public int[] twoSumBruteForce(int[] nums, int target) {
+    public int[] twoSum_bruteForce(int[] nums, int target) {
         for (int i = 0; i < nums.length - 1; i++) {
             for (int j = i + 1; j < nums.length; j++) {
                 if (nums[i] + nums[j] == target) {
@@ -27,7 +27,7 @@ class Solution {
 
     // --- Approach 2: Hash Map (Optimal) ---
     // Time: O(n), Space: O(n)
-    public int[] twoSumHashMap(int[] nums, int target) {
+    public int[] twoSum_hashMap(int[] nums, int target) {
         Map<Integer, Integer> map = new HashMap<>();
         for (int i = 0; i < nums.length; i++) {
             int complement = target - nums[i];
