@@ -1,8 +1,18 @@
-// Approach 1: Counting Sort
-// Time complexity: O(n)
-// Space complexity: O(1)
+/*
+LeetCode 75. Sort Colors
+Link: https://leetcode.com/problems/sort-colors/
+Difficulty: Medium
+Primary: Array
+Tags: [array, two-pointers, sorting]
+Solved: 2025-10-13
+*/
+
+import java.util.*;
 
 class Solution {
+
+    // --- Approach 1: Counting Sort ---
+    // Time: O(n), Space: O(1)
     public void sortColors(int[] nums) {
         int[] count = new int[3];
         for (int num : nums) {
@@ -19,13 +29,10 @@ class Solution {
             }
         }
     }
-}
 
-// Approach 2: Two Pointers
-// Time complexity: O(n) 
-// Space complexity: O(1)
 
-class Solution {
+    // --- Approach 2: Two Pointers ---
+    // Time: O(n), Space: O(1)
     public void sortColors(int[] nums) {
         int i = 0, l = 0, r = nums.length - 1;
 
@@ -48,4 +55,15 @@ class Solution {
             nums[i] = nums[j];
             nums[j] = temp;
         }
+
+
+    // --- Example Test ---
+    public static void main(String[] args) {
+        int[] nums = {2, 0, 2, 1, 1, 0};
+
+        Solution sol = new Solution();
+        sol.sortColors(nums);
+
+        System.out.println(Arrays.toString(nums));
+    }
 }

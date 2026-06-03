@@ -1,8 +1,18 @@
-# Approach 1: Counting Sort
-# Time complexity: O(n)
-# Space complexity: O(1)
+"""
+LeetCode 75. Sort Colors
+Link: https://leetcode.com/problems/sort-colors/
+Difficulty: Medium
+Primary: Array
+Tags: [array, two-pointers, sorting]
+Solved: 2025-10-13
+"""
+
+from typing import List
 
 class Solution:
+
+    # --- Approach 1: Counting Sort ---
+    # Time: O(n), Space: O(1)
     def sortColors(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
@@ -19,11 +29,10 @@ class Solution:
                 i += 1
                 cnt -= 1
 
-# Approach 2: Two Pointers
-# Time complexity: O(n) 
-# Space complexity: O(1)
 
-class Solution:
+
+    # --- Approach 2: Two Pointers ---
+    # Time: O(n), Space: O(1)
     def sortColors(self, nums: List[int]) -> None:
         """
         Do not return anything, modify nums in-place instead.
@@ -45,3 +54,11 @@ class Solution:
                 r -= 1
                 i -= 1
             i += 1
+
+
+# --- Example Test ---
+if __name__ == "__main__":
+    s = Solution()
+    nums = [2, 0, 2, 1, 1, 0]
+    s.sortColors(nums)
+    print(nums)
