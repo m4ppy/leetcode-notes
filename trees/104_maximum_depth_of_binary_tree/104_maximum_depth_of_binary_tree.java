@@ -26,7 +26,7 @@ class Solution {
 
     // --- Approach 1: Breath First Search ---
     // Time: O(n), Space: O(n)
-    public int maxDepth(TreeNode root) {
+    public int maxDepth_bfs(TreeNode root) {
         Queue<TreeNode> q = new LinkedList<>();
         if (root != null) {
             q.add(root);
@@ -52,17 +52,17 @@ class Solution {
 
     // --- Approach 2: Depth First Search ---
     // Time: O(n), Space: O(n)
-    public int maxDepth(TreeNode root) {
+    public int maxDepth_dfs(TreeNode root) {
         if (root == null) {
             return 0;
         }
-        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+        return 1 + Math.max(maxDepth_dfs(root.left), maxDepth_dfs(root.right));
     }
 
 
     // --- Approach 3: Iterative DFS ---
     // Time: O(n), Space: O(n)
-    public int maxDepth(TreeNode root) {
+    public int maxDepth_iterativeDfs(TreeNode root) {
         Stack<Pair<TreeNode, Integer>> stack = new Stack<>();
         stack.push(new Pair<>(root, 1));
         int res = 0;
@@ -90,8 +90,8 @@ class Solution {
         root.right = new TreeNode(20);
         root.right.left = new TreeNode(15);
         root.right.right = new TreeNode(7);
-        
-        System.out.println(sol.maxDepth(root)); // 3
+
+        System.out.println(sol.maxDepth_bfs(root)); // 3
     }
 
 }

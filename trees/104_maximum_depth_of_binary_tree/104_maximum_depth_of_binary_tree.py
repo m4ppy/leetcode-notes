@@ -13,7 +13,7 @@ class Solution:
 
     # Approach 1: Breath First Search
     # Time complexity: O(n) Space complexity: O(n)
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def maxDepth_bfs(self, root: Optional[TreeNode]) -> int:
         depth = 0
 
         if not root:
@@ -35,17 +35,17 @@ class Solution:
     # Approach 2: Depth First Search
     # Time complexity: O(n)
     # Space complexity: O(h) worst case: O(n) best case: O(log n)
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def maxDepth_dfs(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0
 
-        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+        return 1 + max(self.maxDepth_dfs(root.left), self.maxDepth_dfs(root.right))
 
 
     # Approach 3: Iterative DFS
     # Time complexity: O(n)
     # Space complexity: O(n)
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    def maxDepth_iterativeDfs(self, root: Optional[TreeNode]) -> int:
         depth = 0
 
         if not root:
