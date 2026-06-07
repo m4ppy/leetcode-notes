@@ -3,7 +3,7 @@
 **Link:** [LeetCode 102 - Binary Tree Level Order Traversal](https://leetcode.com/problems/maximum-depth-of-binary-tree/)  
 **Difficulty:** Easy
 **Primary Topic:** Tree
-**Tags:** [tree, binary-tree, bfs, queue, traversal]  
+**Tags:** [tree, binary-tree, bfs, dfs, iterative-dfs]  
 **Languages:** Python, Java  
 **Solved:** 2025-11-13
 
