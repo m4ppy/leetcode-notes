@@ -1,9 +1,19 @@
-# Approach 1: Breath First Search
-# Time complexity: O(n)
-# Space complexity: O(n)
+"""
+LeetCode 104. Maximum Depth of Binary Tree
+Link: https://leetcode.com/problems/maximum-depth-of-binary-tree/
+Difficulty: Easy
+Primary: Tree
+Tags: [tree, binary-tree, bfs, dfs, iterative-dfs]
+Solved: 2025-11-13
+"""
+
+from typing import Optional
 
 class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+
+    # Approach 1: Breath First Search
+    # Time complexity: O(n) Space complexity: O(n)
+    def maxDepth_bfs(self, root: Optional[TreeNode]) -> int:
         depth = 0
 
         if not root:
@@ -20,24 +30,22 @@ class Solution:
             depth += 1
 
         return depth
+        
 
-# Approach 2: Depth First Search
-# Time complexity: O(n)
-# Space complexity: O(h) worst case: O(n) best case: O(log n)
-
-class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    # Approach 2: Depth First Search
+    # Time complexity: O(n)
+    # Space complexity: O(h) worst case: O(n) best case: O(log n)
+    def maxDepth_dfs(self, root: Optional[TreeNode]) -> int:
         if not root:
             return 0
 
-        return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+        return 1 + max(self.maxDepth_dfs(root.left), self.maxDepth_dfs(root.right))
 
-# Approach 3: Iterative DFS
-# Time complexity: O(n)
-# Space complexity: O(n)
 
-class Solution:
-    def maxDepth(self, root: Optional[TreeNode]) -> int:
+    # Approach 3: Iterative DFS
+    # Time complexity: O(n)
+    # Space complexity: O(n)
+    def maxDepth_iterativeDfs(self, root: Optional[TreeNode]) -> int:
         depth = 0
 
         if not root:
@@ -54,3 +62,15 @@ class Solution:
                     stack.append((node.right, 1 + cur))
 
         return depth
+
+# --- Example Test ---
+if __name__ == "__main__":
+    solution = Solution()
+    
+    root = TreeNode(3)
+    root.left = TreeNode(9)
+    root.right = TreeNode(20)
+    root.right.left = TreeNode(15)
+    root.right.right = TreeNode(7)
+
+    print(solution.maxDepth(root))

@@ -1,4 +1,4 @@
-# 1. Two Sum
+# 102. Binary Tree Level Order Traversal
 
 **Link:** [LeetCode 102 - Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/)  
 **Difficulty:** Medium
@@ -37,6 +37,5 @@ Given the root of a binary tree, return the level order traversal of its nodes' 
 ---
 
 ### ✅ Example
-```python
-Input: s = "anagram", t = "nagaram"
-Output: True
+>Input: root = [3,9,20,null,null,15,7]
+>Output: [[3],[9,20],[15,7]]
