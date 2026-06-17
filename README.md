@@ -1,48 +1,94 @@
-# 🧠 LeetCode Notes — Leon Choi
+# LeetCode Notes
 
-This repository contains my personal collection of **LeetCode solutions** written in **Python** and **Java**, organized by **main algorithmic topic**.  
-Each problem folder includes:
-- multiple approaches (brute force → optimized)
-- complexity analysis
-- clear explanations and tags for cross-topics
+Personal LeetCode solution notes organized by algorithm topic.
 
----
-
-## 🗂 Repository Structure
-arrays/ # problems mainly using array-based techniques
-hashmaps/ # problems relying on hash tables or maps
-dynamic-programming/ # DP & memoization-based problems
-
+This repository is not just for storing accepted code.
+Each problem folder is used to compare approaches, review complexity, and keep track of problem-solving patterns.
 
 ---
 
-## 🔍 Topics
+## Repository Structure
 
-| Category | Description |
-|-----------|--------------|
-| arrays | subarray, prefix-sum, sliding window |
-| hashmaps | frequency count, prefix-sum lookup |
-| dynamic-programming | recursion, memoization, tabulation |
-| graphs | BFS, DFS, shortest path |
-| ... | ... |
-
----
-
-## 🏷 Example Index
-
-| # | Problem | Difficulty | Primary | Tags |
-|---|----------|-------------|----------|------|
-| 1 | [Two Sum](arrays/001_two_sum/) | Easy | Hashmaps | array, hashmap |
-| 36 | [Valid Sudoku](arrays/036_valid_sudoku/) | Medium | Arrays | matrix, validation |
-| 560 | [Subarray Sum Equals K](hashmaps/560_subarray_sum_equals_k/) | Medium | Arrays | prefix-sum, hashmap |
-| 70 | [Climbing Stairs](dynamic-programming/070_climbing_stairs/) | Easy | DP | recursion, memoization |
+```text
+leetcode-notes/
+├── arrays/
+├── dynamic-programming/
+├── graphs/
+├── heaps/
+├── linked-lists/
+├── sorting-searching/
+├── stacks-queues/
+├── strings/
+├── trees/
+└── README.md
+```
 
 ---
 
-## 🧰 Scripts
-- `scripts/generate_index.py`: builds this table automatically from problem metadata.
+## Topics
+
+| Category              | Focus                                                     |
+| --------------------- | --------------------------------------------------------- |
+| `arrays`              | array traversal, two pointers, sliding window, prefix sum |
+| `strings`             | string parsing, frequency count, anagram, substring       |
+| `linked-lists`        | pointer manipulation, dummy node, fast & slow pointers    |
+| `stacks-queues`       | stack, queue, monotonic stack, BFS-style processing       |
+| `trees`               | binary tree, BST, DFS, BFS, recursion                     |
+| `graphs`              | DFS, BFS, graph traversal, shortest path basics           |
+| `heaps`               | priority queue, top-k problems, heap operations           |
+| `sorting-searching`   | sorting, binary search, search space reduction            |
+| `dynamic-programming` | recursion, memoization, tabulation, state transition      |
 
 ---
 
-## 📜 License
-MIT License © 2025 Leon Choi
+## Languages
+
+| Language | Purpose                                                          |
+| -------- | ---------------------------------------------------------------- |
+| `Python` | Fast implementation and idea testing                             |
+| `Java`   | Object-oriented implementation and interview-style practice      |
+| `C`      | Low-level understanding of pointers, memory, and data structures |
+
+---
+
+## Problem Folder Format
+
+Each problem is usually organized like this:
+
+```text
+1_two_sum/
+├── README.md
+├── 1_two_sum.py
+├── 1_two_sum.java
+└── 1_two_sum.c
+```
+
+The `README.md` inside each problem folder may include:
+
+* problem summary
+* approach notes
+* time and space complexity
+* example test cases
+* implementation details by language
+
+---
+
+## Study Goal
+
+The goal of this repository is to build a strong foundation in data structures and algorithms by solving problems repeatedly and organizing patterns clearly.
+
+Main focus:
+
+* understanding problem-solving patterns
+* comparing brute-force and optimized approaches
+* practicing multiple languages
+* improving code readability and explanation skills
+
+---
+
+## Current Focus
+
+* C implementations for existing Python / Java solutions
+* Cleaner problem notes
+* More consistent naming and folder structure
+* Core patterns for technical interviews
