@@ -1,3 +1,12 @@
+"""
+LeetCode 707. Design Linked List
+Link: https://leetcode.com/problems/design-linked-list/
+Difficulty: Medium
+Primary: Linked List
+Tags: [linked-list, design, simulation]
+Solved: 2026-06-28
+"""
+
 from typing import List, Optional
 
 class ListNode:
@@ -6,6 +15,7 @@ class ListNode:
         self.val = val
         self.next = None
 
+# --- Approach 1: Singly Linked List ---
 class MyLinkedList:
 
     def __init__(self):
@@ -78,3 +88,25 @@ class MyLinkedList:
             p.next = p.next.next
         
         self.size = self.size - 1
+
+
+# --- Example Test ---
+if __name__ == "__main__":
+    linked_list = MyLinkedList()
+
+    linked_list.addAtHead(1)
+    linked_list.addAtTail(3)
+    linked_list.addAtIndex(1, 2)
+
+    print(linked_list.get(1))  # 2
+
+    linked_list.deleteAtIndex(1)
+
+    print(linked_list.get(1))  # 3
+
+    # Output the entire linked list
+    current = linked_list.head
+
+    while current:
+        print(current.val, end=" -> " if current.next else "\n")
+        current = current.next

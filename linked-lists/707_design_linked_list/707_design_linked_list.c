@@ -1,3 +1,12 @@
+/*
+LeetCode 707. Design Linked List
+Link: https://leetcode.com/problems/design-linked-list/
+Difficulty: Medium
+Primary: Linked List
+Tags: [linked-list, design, simulation]
+Solved: 2026-06-27
+*/
+
 #include <stdlib.h>
 #include <stdio.h>
 
@@ -120,4 +129,41 @@ void myLinkedListFree(MyLinkedList* obj) {
     }
 
     free(obj);
+}
+
+// --- Example Test ---
+int main(void) {
+    MyLinkedList* linkedList = myLinkedListCreate();
+
+    if (linkedList == NULL) {
+        return 1;
+    }
+
+    myLinkedListAddAtHead(linkedList, 1);
+    myLinkedListAddAtTail(linkedList, 3);
+    myLinkedListAddAtIndex(linkedList, 1, 2);
+
+    printf("%d\n", myLinkedListGet(linkedList, 1));  // 2
+
+    myLinkedListDeleteAtIndex(linkedList, 1);
+
+    printf("%d\n", myLinkedListGet(linkedList, 1));  // 3
+
+    ListNode* current = linkedList->head;
+
+    while (current != NULL) {
+        printf("%d", current->val);
+
+        if (current->next != NULL) {
+            printf(" -> ");
+        } else {
+            printf("\n");
+        }
+
+        current = current->next;
+    }
+
+    myLinkedListFree(linkedList);
+
+    return 0;
 }
